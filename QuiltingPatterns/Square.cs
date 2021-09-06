@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace QuiltingPatterns
 {
-    public class Square : Shapes
+    public class square : Shapes
     {
-        public Square(List<decimal> sides, string color)
+        public square(List<decimal> sides, string color)
         {
             this.sides = sides;
             this.color = color;
-            this.shape = Shapes.quiltingShape.Triangle;
+            this.shape = Shapes.quiltingShape.Square;
         }
         public override decimal getArea(List<decimal> sides)
         {
-            throw new NotImplementedException();
+            return sides[0] * sides[0];
         }
     }
 }

@@ -17,7 +17,12 @@ namespace QuiltingPatterns
 
         public override decimal getArea(List<decimal> sides)
         {
-            throw new NotImplementedException();
+            decimal a = sides[0];
+            decimal b = sides[1];
+            decimal c = sides[2];
+            decimal s = (a + b + c) / 2;
+
+            return Math.Round((decimal)Math.Sqrt((double)(s * (s - a) * (s - b) * (s - c))), 3);
         }
     }
 }

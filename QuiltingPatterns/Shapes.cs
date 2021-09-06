@@ -15,6 +15,14 @@ namespace QuiltingPatterns
 
         public abstract decimal getArea(List<decimal>sides);
         //public abstract void createShape();
+        
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
 
+            sb.AppendLine($"Your shape is a {color} {shape}, and the area is {getArea(sides)}.");
+
+            return sb.ToString();
+        }
     }
 }

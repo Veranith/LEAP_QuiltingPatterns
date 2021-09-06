@@ -12,12 +12,12 @@ namespace QuiltingPatterns
         {
             this.sides = sides;
             this.color = color;
-            this.shape = Shapes.quiltingShape.Triangle;
+            this.shape = Shapes.quiltingShape.Rectangle;
         }
 
         public override decimal getArea(List<decimal> sides)
         {
-            throw new NotImplementedException();
+            return sides[0] * sides[1];
         }
     }
 }
