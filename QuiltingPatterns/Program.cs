@@ -11,24 +11,30 @@ namespace QuiltingPatterns
             Console.WriteLine($"Welcome to RyRob's amazing Quilting Pattern Collector!\n");
 
             var patterns = new List<Shapes>();
-
-            switch (userIO.displayMenu())
+            while (true)
             {
-                case "t":
-                    Console.WriteLine("create Triangle");
-                    break;
-                case "s":
-                    Console.WriteLine("create square");
-                    break;
-                case "r":
-                    Console.WriteLine("create rectangle");
-                    break;
-                case "p":
-                    userIO.displayPatterns(patterns);
-                    break;
-                default:
-                    return;
+                switch (userIO.displayMenu())
+                {
+                    case "t":
+                        Console.WriteLine("Creating Triangle.");
+                        patterns.Add(Shapes.createShape(Shapes.quiltingShape.Triangle));
+                        break;
+                    case "s":
+                        Console.WriteLine("Creating Square.");
+                        patterns.Add(Shapes.createShape(Shapes.quiltingShape.Square));
+                        break;
+                    case "r":
+                        Console.WriteLine("Creating Rectangle.");
+                        patterns.Add(Shapes.createShape(Shapes.quiltingShape.Rectangle));
+                        break;
+                    case "p":
+                        userIO.displayPatterns(patterns);
+                        break;
+                    default:
+                        return;
+                }
             }
+
         }
     }
 }

@@ -12,7 +12,7 @@ namespace QuiltingPatterns
         {
             this.sides = sides;
             this.color = color;
-            this.shape = Shapes.quiltingShape.Square;
+            this.shape = quiltingShape.Square;
         }
         public override decimal getArea(List<decimal> sides)
         {

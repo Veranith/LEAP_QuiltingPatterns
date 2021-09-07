@@ -21,7 +21,7 @@ namespace QuiltingPatterns
             return userInput.ToLower();
         }
 
-        public static decimal getUserInput(string message, List<decimal> validStrings)
+        public static decimal getUserInput(string message)
         {
             string userInput;
             decimal result;
@@ -39,9 +39,9 @@ namespace QuiltingPatterns
         {
             if (patterns.Count > 0)
             {
-                foreach (var item in patterns)
+                for (int i = 0; i < patterns.Count; i++)
                 {
-                    Console.Write(item.ToString());
+                    Console.Write($"Pattern {i + 1}:  {patterns[i].ToString()}");
                 }
             } else
             {
