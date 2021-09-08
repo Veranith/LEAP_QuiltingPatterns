@@ -52,7 +52,7 @@ namespace QuiltingPatterns
         {
             var message = new StringBuilder();
             message.Append("Enter the desired color:  ");
-            var allowedColors = new List<string> { "red", "green", "blue" };
+            var allowedColors = new List<string> { "red", "black", "white", "rose", "blue", "cyan", "yellow", "pink", "purple", "orange", "banana", "coral", "lime", "green", "gray", "maroon", "brown", "tan" };
             return userIO.getUserInput(message.ToString(), allowedColors);
         }
         
